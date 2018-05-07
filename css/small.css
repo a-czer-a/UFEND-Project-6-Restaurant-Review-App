@@ -1,0 +1,24 @@
+@media screen and (max-width: 700px) {
+
+    #restaurants-list {
+        padding: 0;
+        margin-top: 20px;
+    }
+    #restaurants-list li {
+        width: 100%;
+        padding: 0;
+    }
+
+    .filter-options {
+        grid-template-columns: auto 45% 20px 45% auto;
+    }
+
+    #reviews-list li {
+        width: 100%;
+        padding: 0;
+    }
+
+    #restaurant-hours {
+        padding-bottom: 15px;
+    }
+}

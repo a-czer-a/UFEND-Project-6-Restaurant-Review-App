@@ -14,31 +14,31 @@
 <body>
     <header>
         <nav>
-            <h1><a href="/">Restaurant Reviews</a></h1>
+            <h1><a href="/" aria-label="Home page">Restaurant Reviews</a></h1>
         </nav>
     </header>
 
     <main id="maincontent">
         <section id="map-container">
-            <div id="map"></div>
+            <div id="map" aria-role="application" aria-label="Map with reviewed restaurants"></div>
         </section>
         <section>
-            <div class="filter-options">
-                <h2>Filter Results</h2>
-                <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+            <div class="filter-options" aria-label="Filter options ">
+                <h2 aria-role="heading">Filter Results</h2>
+                <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="Search for restaurant by neighborhood">
           <option value="all">All Neighborhoods</option>
         </select>
-                <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+                <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="Search for restaurant by cuisine">
           <option value="all">All Cuisines</option>
         </select>
             </div>
-            <ul id="restaurants-list"></ul>
+            <ul id="restaurants-list" aria-role="list" aria-label="List of reviewed restaurants"></ul>
         </section>
     </main>
 
     <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
     <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap "></script>
 
 
     <footer id="footer">

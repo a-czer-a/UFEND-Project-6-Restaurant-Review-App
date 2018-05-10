@@ -3,7 +3,8 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/small.css">
     <link rel="stylesheet" href="css/medium.css">
@@ -32,17 +33,19 @@
           <option value="all">All Cuisines</option>
         </select>
             </div>
-            <ul id="restaurants-list" aria-role="list" aria-label="List of reviewed restaurants"></ul>
+            <ul id="restaurants-list" aria-label="List of reviewed restaurants"></ul>
         </section>
     </main>
 
     <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
     <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap "></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKjFgvq_rY0fgJrnCnReTnMwo2F7aFqMs&libraries=places&callback=initMap"></script>
+<!--    <script async defer src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyCKjFgvq_rY0fgJrnCnReTnMwo2F7aFqMs&libraries=places&callback=initMap"></script>-->
+    <script src='service_worker.js'></script>
 
 
     <footer id="footer">
-        Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+        Copyright (c) 2017 <a href="/" aria-label="Home page"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
 
 </body>

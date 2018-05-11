@@ -1,4 +1,4 @@
-if (navigator.serviceWorker) {
+if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
         navigator.serviceWorker.register('/service_worker.js');
     });
@@ -11,24 +11,24 @@ if (navigator.serviceWorker) {
             caches.open(cacheVersion).then(cache =>
                 cache.addAll([
             '/',
-            'js/main.js',
-            'js/dbhelper.js',
-            'js/restaurant_info.js',
-            'css/styles.css',
-            'css/small.css',
-            'css/medium.css',
-            'css/large.css',
-            'data/restaurants.json',
-            'img/1.jpg',
-            'img/2.jpg',
-            'img/3.jpg',
-            'img/4.jpg',
-            'img/5.jpg',
-            'img/6.jpg',
-            'img/7.jpg',
-            'img/8.jpg',
-            'img/9.jpg',
-            'img/10.jpg',
+            './js/main.js',
+            './js/dbhelper.js',
+            './js/restaurant_info.js',
+            './css/styles.css',
+            './css/small.css',
+            './css/medium.css',
+            './css/large.css',
+            './data/restaurants.json',
+            './img/1.jpg',
+            './img/2.jpg',
+            './img/3.jpg',
+            './img/4.jpg',
+            './img/5.jpg',
+            './img/6.jpg',
+            './img/7.jpg',
+            './img/8.jpg',
+            './img/9.jpg',
+            './img/10.jpg',
             './index.html',
             './restaurant.html',
             './restaurant.html?id=1',
@@ -41,9 +41,7 @@ if (navigator.serviceWorker) {
             './restaurant.html?id=8',
             './restaurant.html?id=9',
             './restaurant.html?id=10'
-        ])).then(() => {
-                console.log('Service Worker installation completed');
-            })
+            ]))
         );
     });
 

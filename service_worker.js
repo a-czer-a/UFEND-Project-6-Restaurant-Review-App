@@ -1,9 +1,12 @@
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/service_worker.js');
-    });
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/service_worker.js')
+        .then(registration =>
+            console.log(`Registration succeeded with ${registration.scope}`)
+        ).catch(error =>
+            console.log(`Registration failed with + ${error}`)
+        )
 
-    var cacheVersion = 'restaurant-app-v1';
+    const cacheVersion = 'restaurant-app-v1';
 
 
     self.addEventListener('install', event => {
@@ -45,7 +48,7 @@ if ('serviceWorker' in navigator) {
         );
     });
 
-    self.addEventListener('fetch',  event => {
+    self.addEventListener('fetch', event => {
         event.respondWith(
             caches.match(event.request).then(response => {
                 if (response) return response;

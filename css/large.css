@@ -1,16 +1,13 @@
 @media screen and (min-width: 1000px) {
-
-    #restaurants-list {
-        padding: 0;
-        margin: 20px;
-    }
     #restaurants-list li {
         width: 30%;
     }
+
     #restaurant-container {
         grid-template-columns: 50% 50%;
         grid-template-rows: 80px 60px auto 70px;
     }
+
     #restaurant-address,
     #restaurant-hours td,
     #reviews-container h2 {

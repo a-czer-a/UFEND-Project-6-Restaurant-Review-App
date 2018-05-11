@@ -8,7 +8,13 @@ class DBHelper {
      * Change this to restaurants.json file location on your server.
      */
     static get DATABASE_URL() {
+<<<<<<< HEAD
         const port = 8000; // Change this to your server port
+||||||| merged common ancestors
+        const port = 8000 // Change this to your server port
+=======
+        const port = 3000;
+>>>>>>> b690d524350e9a786bb1d4ac7edd6c2f732d93f3
 
         return `http://localhost:${port}/data/restaurants.json`;
         //        return 'https://github.com/a-czer-a/UFEND-Project-6-Restaurant-Review-App/blob/master/data/restaurants.json';

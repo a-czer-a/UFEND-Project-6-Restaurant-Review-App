@@ -6,13 +6,14 @@ if (navigator.serviceWorker) {
             ).catch(error =>
                 console.log(`Registration failed with + ${error}`)
             )
+    });
 
-        const cacheVersion = 'restaurant-app-v1';
+    const cacheVersion = 'restaurant-app-v1';
 
-        self.addEventListener('install', event => {
-            event.waitUntil(
-                caches.open(cacheVersion).then(cache =>
-                    cache.addAll([
+    self.addEventListener('install', event => {
+        event.waitUntil(
+            caches.open(cacheVersion).then(cache =>
+                cache.addAll([
             './',
             './js/main.js',
             './js/dbhelper.js',
@@ -45,16 +46,15 @@ if (navigator.serviceWorker) {
             './restaurant.html?id=9',
             './restaurant.html?id=10'
             ]))
-            );
-        });
+        );
+    });
 
-        self.addEventListener('fetch', event => {
-            event.respondWith(
-                caches.match(event.request).then(response => {
-                    if (response) return response;
-                    return fetch(event.request);
-                })
-            );
-        });
-    })
+    self.addEventListener('fetch', event => {
+        event.respondWith(
+            caches.match(event.request).then(response => {
+                if (response) return response;
+                return fetch(event.request);
+            })
+        );
+    });
 }

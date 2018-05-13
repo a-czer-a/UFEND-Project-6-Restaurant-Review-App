@@ -5,6 +5,7 @@
     }
 
     .filter-options {
+        -ms-grid-columns: auto 45% 20px 45% auto;
         grid-template-columns: auto 45% 20px 45% auto;
     }
 

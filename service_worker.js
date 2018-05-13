@@ -1,15 +1,13 @@
 if (navigator.serviceWorker) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service_worker.js')
-            .then(registration =>
-                console.log(`Registration succeeded with ${registration.scope}`)
-            ).catch(error =>
-                console.log(`Registration failed with + ${error}`)
-            )
-    });
-}
+    navigator.serviceWorker.register('service_worker.js')
+        .then(registration =>
+            console.log(`Registration succeeded with ${registration.scope}`)
+        ).catch(error =>
+            console.log(`Registration failed with + ${error}`)
+        )
+};
 
-const cacheVersion = 'restaurant-app-v1';
+const cacheVersion = 'cache-v1';
 
 self.addEventListener('install', event => {
     event.waitUntil(
@@ -54,8 +52,7 @@ self.addEventListener('install', event => {
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request).then(response => {
-            if (response) return response;
-            return fetch(event.request);
+            return response || fetch(event.request);
         })
     );
 });

@@ -10,7 +10,7 @@ class DBHelper {
     static get DATABASE_URL() {
         const port = 60389; // Change this to your server port
         //return `http://127.0.0.1:${port}/data/restaurants.json`;
-        return 'https://htmlpreview.github.io/?https://raw.githubusercontent.com/a-czer-a/UFEND-Project-6-Restaurant-Review-App/master/data/restaurants.jsonhttps://raw.githubusercontent.com/a-czer-a/UFEND-Project-6-Restaurant-Review-App/master/data/restaurants.json';
+        return 'https://a-czer-a.github.io/UFEND-Project-6-Restaurant-Review-App/data/restaurants.json'
     }
 
     /**

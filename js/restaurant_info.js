@@ -50,7 +50,7 @@ fetchRestaurantFromURL = (callback) => {
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
     const name = document.getElementById('restaurant-name');
-    name.setAttribute('aria-role', 'heading');
+    name.setAttribute('role', 'heading');
     name.setAttribute('tabindex', '0');
     name.innerHTML = restaurant.name;
 
@@ -104,7 +104,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     const container = document.getElementById('reviews-container');
     const title = document.createElement('h2');
     title.innerHTML = 'Reviews';
-    title.setAttribute('aria-role', 'heading');
+    title.setAttribute('role', 'heading');
     container.appendChild(title);
 
     if (!reviews) {
